@@ -3,13 +3,13 @@ import L from 'leaflet';
 import * as DomUtil from "leaflet/src/dom/DomUtil.js";
 import * as DomEvent from "leaflet/src/dom/DomEvent.js";
 
-export var LocateControl = L.Control.extend({
+export var FindFarthestControl = L.Control.extend({
     options: {
         position: 'topleft',
         locateText: '<span aria-hidden="true">&#x1F50E;</span>',
         locateTitle: 'Locate',
         locateProgressText: '<div style="padding-top: 6px"><div class="loader"/></span>',
-        locateAction: async () => {},
+        findAction: async () => {},
     },
 
     onAdd: function (map) {
@@ -31,7 +31,7 @@ export var LocateControl = L.Control.extend({
             this._locateButton.innerHTML = this.options.locateProgressText;
             this.disable();
 
-            await this.options.locateAction();
+            await this.options.findAction();
 
             this.enable();
             this._locateButton.innerHTML = this.options.locateText;
@@ -85,6 +85,6 @@ export var LocateControl = L.Control.extend({
     }
 });
 
-export var locateControl = function (options) {
-    return new LocateControl(options);
+export var findFarthestControl = function (options) {
+    return new FindFarthestControl(options);
 };
