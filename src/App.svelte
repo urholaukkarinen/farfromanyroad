@@ -16,7 +16,7 @@
 
     const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
     const tileLayerOptions = {
-        minZoom: 13,
+        minZoom: 10,
         maxZoom: 20,
         maxNativeZoom: 19,
         attribution: "© OpenStreetMap contributors",
