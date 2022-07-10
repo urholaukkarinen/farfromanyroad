@@ -9,7 +9,7 @@
     import {locateControl} from './lib/LocateControl';
 
     const mapOptions: MapOptions = {
-        center: [62.26086415112138, 25.83280371176147],
+        center: [60.16952, 24.93545],
         zoom: 15,
         zoomControl: true,
     };
