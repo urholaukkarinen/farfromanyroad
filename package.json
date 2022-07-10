@@ -1,0 +1,27 @@
+{
+  "name": "farfromanyroad",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@types/leaflet": "^1.7.11",
+    "@types/node": "^18.0.3",
+    "@types/svelte-leafletjs": "^0.8.2",
+    "node-sass": "^7.0.1",
+    "svelte": "^3.44.0",
+    "svelte-leafletjs": "^0.9.0",
+    "svelte-preprocess": "^4.10.7",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.9",
+    "vite-rust-plugin": "^1.0.4"
+  },
+  "dependencies": {
+    "leaflet": "^1.8.0"
+  }
+}
