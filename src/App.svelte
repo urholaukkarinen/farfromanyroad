@@ -4,9 +4,11 @@
     import {onMount} from "svelte";
 
     import {LeafletMap, Marker, TileLayer} from 'svelte-leafletjs';
-    import {LatLng, MapOptions, Point} from 'leaflet';
+    import L, {LatLng, MapOptions, Point} from 'leaflet';
     import {fetchRoadNodes, getFarthestPointFromSites} from "$wasm";
     import {locateControl} from './lib/LocateControl';
+
+    import 'leaflet.locatecontrol';
 
     const mapOptions: MapOptions = {
         center: [60.16952, 24.93545],
@@ -67,6 +69,8 @@
     }
 
     onMount(async () => {
+        L.control.locate().addTo(leafletMap.getMap());
+
         locateControl({
             locateAction: findFarthest
         }).addTo(leafletMap.getMap());
