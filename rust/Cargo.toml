@@ -7,7 +7,7 @@ edition = "2021"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-voronator = { path = "../../../Rust/voronator-rs", default-features = false }
+voronator = { git = "https://github.com/urholaukkarinen/voronator-rs.git", branch="include-circumcircles", default-features = false }
 serde = { version = "1.0", features = ["derive"] }
 wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
 wasm-bindgen-futures = "0.4"
